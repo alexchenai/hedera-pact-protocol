@@ -1,0 +1,17 @@
+services:
+    hedera-pact-deck:
+        name: hedera-pact-deck
+        hosts:
+            - hedera-pact-deck.chitacloud.dev
+        port: 8080
+        ttl: 777600
+        memory: 256
+        cpu: 0.25
+        dockerfile: Dockerfile
+        docker_context: .
+        handler: Handle
+        public_invoke: true
+        files:
+            - pitch-deck.html
+            - Dockerfile
+        working_directory: /app/data/hedera-pact-protocol
